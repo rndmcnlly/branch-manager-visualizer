@@ -1,8 +1,8 @@
 // create access to internal data
 api = netflix.appContext.state.playerApp.getAPI()
 sessionId = api.videoPlayer.getAllPlayerSessionIds()[0]
-interactiveData = api.branching.getInteractiveVideoMoments(sessionId)
-choichePointMetadata = interactiveData.choicePointNavigatorMetadata.choicePointsMetadata.choicePoints
+interactiveData = api.ix.getInteractiveVideoMoments(sessionId)
+choichePointMetadata = interactiveData.playerControls.choicePointsMetadata.choicePoints
 
 // create shorthand for playSegment
 pS = api.videoPlayer.getVideoPlayerBySessionId(sessionId).playSegment
